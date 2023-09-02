@@ -1,0 +1,26 @@
+
+	package com.example.demo;
+
+	import org.springframework.web.bind.annotation.GetMapping;
+	import org.springframework.web.bind.annotation.RestController;
+	import java.time.LocalTime;
+
+	import static com.example.demo.DepartureTime.*;
+	@RestController
+
+	public class DepartureTimeController {
+
+	    @GetMapping("/Detail")
+	    //localhost:8080/Detail
+	    public DepartureTime getDepartureTime() {
+
+	        return new DepartureTime(constInp,20,10);
+	    }
+	    @GetMapping("/departureTime") // localhost:8080/departureTime
+	    public LocalTime departureTime() {
+	        return setTime();
+	    }
+	}
+
+
+}
